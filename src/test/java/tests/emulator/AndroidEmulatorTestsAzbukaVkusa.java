@@ -30,9 +30,12 @@ public class AndroidEmulatorTestsAzbukaVkusa extends TestBaseEmulatorAzbukaVkusa
                     .selectDeliveryTime();
         });
 
-        step("Go to catalog and add some product to cart", () -> {
+        step("Go to catalog and choose the first subcategory", () -> {
             homePage.goToCatalog();
             catalogPage.chooseFirstCategory();
+        });
+
+        step("Add some product to cart", () -> {
             productsListPage.firstProductAddToCart();
         });
 
